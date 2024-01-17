@@ -8,6 +8,12 @@ Proof of concept of the AWS Karpenter cluster autoscaler
 eksctl create cluster -f cluster-with-karpenter-v1.yaml
 ```
 
+> **WARNING**
+> 
+> Command not currently working, getting the following error:
+> 
+>  ```failed to install Karpenter chart: failed to install chart: timed out waiting for the condition```
+
 ## Cleanup
 
 ```
