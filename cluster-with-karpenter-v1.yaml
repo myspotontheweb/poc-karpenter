@@ -11,7 +11,8 @@ iam:
   withOIDC: true # required
 
 karpenter:
-  version: 'v0.33.1' # Exact version must be specified
+  version: 'v0.32.5' # Exact version must be specified
+  # version: 'v0.33.1' # See: https://github.com/eksctl-io/eksctl/issues/7481
 
 managedNodeGroups:
   - name: managed-ng-1
