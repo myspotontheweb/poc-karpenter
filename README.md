@@ -157,26 +157,6 @@ helm upgrade --install karpenter oci://public.ecr.aws/karpenter/karpenter --vers
   --wait
 ```
 
-> 
-> **ERROR**
->
-> Pods are crashlooping with the following log message
->
-> ```
-> $ kubectl -n kube-system logs karpenter-789fbb68f8-brf66
-> panic: fetching queue url, AWS.SimpleQueueService.NonExistentQueue: The specified queue does not exist.
-> 
-> goroutine 1 [running]:
-> github.com/samber/lo.must({0x25cbe60, 0xc0009da0e0}, {0x0, 0x0, 0x0})
->         github.com/samber/lo@v1.39.0/errors.go:53 +0x1e9
-> github.com/samber/lo.Must[...](...)
->         github.com/samber/lo@v1.39.0/errors.go:65
-> github.com/aws/karpenter/pkg/controllers.NewControllers({0x30c0598, 0xc0009e2030}, 0xc0006efe48?, {0x30c4268, 0x47e4b60}, {0x30cff80?, 0xc0003d7e60}, {0x30939c0?, 0xc0006efe48}, 0xc0009d6e70, ...)
->         github.com/aws/karpenter/pkg/controllers/controllers.go:57 +0x50e
-> main.main()
->         github.com/aws/karpenter/cmd/controller/main.go:56 +0x62a
-> ```
-
 ### Create NodePool
 
 ```bash
