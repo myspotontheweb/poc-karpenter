@@ -67,7 +67,8 @@ to install Karpenter separately using helm.
 
 ```bash
 export KARPENTER_NAMESPACE=kube-system
-export KARPENTER_VERSION=v0.33.1
+#export KARPENTER_VERSION=v0.33.1
+export KARPENTER_VERSION=v0.32.5   # Stable release
 export K8S_VERSION=1.28
 
 export AWS_PARTITION="aws" 
